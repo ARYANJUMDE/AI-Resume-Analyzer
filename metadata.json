@@ -1,0 +1,6 @@
+{
+  "name": "AnalyzeAI Resume",
+  "description": "An intelligent resume analysis tool powered by Gemini that provides comprehensive feedback, ATS scores, and skill detection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
