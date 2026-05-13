@@ -19,18 +19,18 @@ import {
   ArrowRight,
   Plus
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Progress } from "@/components/ui/progress";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Separator } from "@/components/ui/separator";
-import { analyzeResume, type AnalysisResult } from "@/lib/gemini";
-import { extractTextFromPDF } from "@/lib/pdf";
-import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button.tsx";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card.tsx";
+import { Input } from "@/components/ui/input.tsx";
+import { Textarea } from "@/components/ui/textarea.tsx";
+import { Progress } from "@/components/ui/progress.tsx";
+import { Badge } from "@/components/ui/badge.tsx";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs.tsx";
+import { ScrollArea } from "@/components/ui/scroll-area.tsx";
+import { Separator } from "@/components/ui/separator.tsx";
+import { analyzeResume, type AnalysisResult } from "@/lib/gemini.ts";
+import { extractTextFromPDF } from "@/lib/pdf.ts";
+import { cn } from "@/lib/utils.ts";
 
 export default function App() {
   const [file, setFile] = useState<File | null>(null);
