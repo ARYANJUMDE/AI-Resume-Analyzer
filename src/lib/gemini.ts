@@ -1,6 +1,14 @@
 import { GoogleGenAI, Type } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+// Use import.meta.env for Vite and package as fallback. 
+// Note: In deployment environments like Vercel, VITE_ prefix is required for client-side access.
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY || (typeof process !== 'undefined' ? process.env.GEMINI_API_KEY : '');
+
+if (!apiKey) {
+  console.warn("GEMINI_API_KEY is not defined. The AI features will not work until an API key is provided in the environment variables.");
+}
+
+const ai = new GoogleGenAI({ apiKey: apiKey || 'MISSING_KEY' });
 
 export interface AnalysisResult {
   overallScore: number;

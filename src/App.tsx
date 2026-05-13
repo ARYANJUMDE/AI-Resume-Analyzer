@@ -28,9 +28,9 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
-import { analyzeResume, AnalysisResult } from "@/src/lib/gemini.ts";
-import { extractTextFromPDF } from "@/src/lib/pdf.ts";
-import { cn } from "@/lib/utils.ts";
+import { analyzeResume, type AnalysisResult } from "@/lib/gemini";
+import { extractTextFromPDF } from "@/lib/pdf";
+import { cn } from "@/lib/utils";
 
 export default function App() {
   const [file, setFile] = useState<File | null>(null);
